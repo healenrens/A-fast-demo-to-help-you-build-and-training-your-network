@@ -16,3 +16,5 @@ class LayerNormalization(nn.Module):
         ln_out = (z - mu.expand_as(z)) / (sigma.expand_as(z) + self.eps)
         ln_out = ln_out * self.a_2.expand_as(ln_out) + self.b_2.expand_as(ln_out)
         return ln_out+z
+    #this code does not work
+    #this is a normway from paper "Attention is all your need",see in https://arxiv.org/abs/1706.03762v5
